@@ -1,0 +1,28 @@
+{% extends "menu.html" %}
+<!DOCTYPE html>
+
+{% block body %}
+
+<div class="container">
+    <form class="form-horizontal" action="/search_results" method="POST">
+        <label for="dataInput4" class="col-sm-2 control-label">Search</label>
+            <div class="col-sm-10">
+                <input type="text" name="search" class="form-control" placeholder="Search"></input>
+            </div>
+    </form>
+</div>
+<br><br><br><br>
+
+{% for item in items %}
+<div class="container">     
+    <div class="row">
+        <div class="col-xs-12 posts"><h3 class="">{{ item.title }} </h3></div>
+        <div class="col-xs-12 posts"><h4 class="">{{ item.tags }} </h4></div>
+        <div class="col-xs-12 posts"><p class="">{{ item.content }} </p></div>
+    </div>
+    <br>
+</div>
+{% endfor %}}
+
+
+{% endblock %}

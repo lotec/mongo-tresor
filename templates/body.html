@@ -1,0 +1,17 @@
+{% extends "menu.html" %}
+{% block body %}
+    <div class="container">
+        <div class="row">
+            {% for all_titles, all_filenames in getall %}
+            <div class="col-md-6 col-lg-4 movie-tile text-center">
+                <a href="{{ url_for('showMoviePage', movie_id=all_titles.id) }}" class="nounderline">
+                <img src='/static/images/{{ all_filenames.filename }}' width='220' height='342'>
+                <h2>{{ all_titles.title }}</h2>
+                </a>
+            </div>
+            {% endfor %}
+      </div>   
+    </div>
+  </body>
+</html>
+{% endblock %}

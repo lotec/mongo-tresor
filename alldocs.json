@@ -1,0 +1,14 @@
+{
+title: "reteta_tort_vanilie",
+tags: ["tort", "desert"],
+content: "insert text here"
+category: "retete"
+}
+
+findall = collection.find(
+
+{'$text': {'$search': result}}, {'score': {'$meta': 'textScore'}}, sort=[{'score': {'$meta': 'textScore'}}]
+
+)
+
+Dogs eat cats and dog eats pigeons too, "content" : "Cats are not evil", "likes" : 30, "year" : 2015, "language" : "english", "score" : 1.3333333333333335 }
